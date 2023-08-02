@@ -6,7 +6,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Contacto from "./pages/Contacto"
 import QuienSoy from "./pages/QuienSoy"
 // import Greeting from './components/pure/greeting';
-import GreetingF from './components/pure/greetingF';
+// import GreetingF from './components/pure/greetingF';
+import TaskListComponent from './components/container/task_list';
 
 
 import './App.css';
@@ -84,8 +85,11 @@ function App() {
 
       <header>
         {/* Componente propio Greeting.jsx */}
-       {/* <Greeting name="Alexis"/> */}
-       <GreetingF name="Alexis"/>
+       {/* <Greeting name="Alexis"/>
+       <GreetingF name="Alexis"/> */}
+
+       {/* Componente de Listado de Tareas */}
+       <TaskListComponent />
       </header>
     </div>
   );
