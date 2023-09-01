@@ -5,6 +5,7 @@ import TaskComponent from '../pure/task'
 
 const TaskListComponent = () => {
     const defaulTask = new Task('Example', 'Default description', false, LEVELS.NORMAL)
+    const [loading, setLoading] = useState(true);
 
     // Estado del componente
     const [tasks, setTasks] = useState([defaulTask]);
@@ -12,6 +13,7 @@ const TaskListComponent = () => {
     // Control del ciclo de vida del componente
     useEffect(() => {
         console.log('Task State has been modified');
+        setLoading(false)
         return () => {
             console.log('TaskList component is going to unmount...');
         };
